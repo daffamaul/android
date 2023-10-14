@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.a4.daffaapps"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.a4.daffaapps"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
