@@ -13,7 +13,10 @@
         android:theme="@style/Theme.DaffaApps"
         tools:targetApi="31">
         <activity
-            android:name=".ScrollingIceCold"
+            android:name=".EksplisitIntentTwo"
+            android:exported="true" />
+        <activity
+            android:name=".EksplisitIntentOne"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
