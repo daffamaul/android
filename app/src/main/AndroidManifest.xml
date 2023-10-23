@@ -16,7 +16,7 @@
             android:name=".EksplisitIntentTwo"
             android:exported="true" />
         <activity
-            android:name=".EksplisitIntentOne"
+            android:name=".ImplisitIntent"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
