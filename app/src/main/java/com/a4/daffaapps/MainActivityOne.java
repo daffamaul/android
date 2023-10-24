@@ -37,4 +37,20 @@ public class MainActivityOne extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivityForResult(intent, TEXT_REQUEST);
     }
+
+    @Override
+    public void onActivityResult(int reqCode, int resCode, Intent data) {
+        super.onActivityResult(reqCode, resCode, data);
+
+        if(reqCode == TEXT_REQUEST) {
+            if(resCode == RESULT_OK) {
+                String reply = data.getStringExtra(MainActivitySecond.EXTRA_REPLY);
+                
+                mReplyHeadTextView.setVisibility(View.VISIBLE);
+
+                mReplyTextView.setText(reply);
+                mReplyTextView.setVisibility(View.VISIBLE);
+            }
+        }
+    }
 }
