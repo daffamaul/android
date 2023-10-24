@@ -45,7 +45,7 @@ public class MainActivityOne extends AppCompatActivity {
         if(reqCode == TEXT_REQUEST) {
             if(resCode == RESULT_OK) {
                 String reply = data.getStringExtra(MainActivitySecond.EXTRA_REPLY);
-                
+
                 mReplyHeadTextView.setVisibility(View.VISIBLE);
 
                 mReplyTextView.setText(reply);
