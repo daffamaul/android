@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     private int mCount = 0;
 
+    private int secondCount = 1;
+
     private TextView mShowCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void countUp(View view) {
-        mCount++;
+        int next = mCount;
+        mCount = secondCount;
+        secondCount = next + mCount;
         if (mShowCount != null)
-            mShowCount.setText(Integer.toString(mCount));
+            mShowCount.setText(Integer.toString(next));
     }
 }
