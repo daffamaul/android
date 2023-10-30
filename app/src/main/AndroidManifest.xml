@@ -16,13 +16,22 @@
 <!--            android:name=".MainActivity"-->
 <!--            android:exported="true" />-->
         <activity
+<<<<<<< HEAD
             android:name=".MainActivity"
+=======
+            android:name=".MainActivityOne"
+>>>>>>> 64cfd7816792d39564935bdfe35940ea57ac7ec1
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivitySecond"
+            android:exported="true">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivityOne" />
         </activity>
     </application>
 
