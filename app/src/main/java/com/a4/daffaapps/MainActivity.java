@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private int mCount = 0;
+
+    private int secondCount = 1;
 
     private TextView mShowCount;
     @Override
@@ -25,7 +28,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void countUp(View view) {
-        mCount++;
+        EditText inputLimit = findViewById(R.id.input_limit);
+        if(inputLimit.getText().toString().isEmpty()) {
+            int limit = Integer.parseInt(inputLimit.getText().toString());
+            if(mCount >= limit) {
+                Toast.makeText(this, "Telah mencapai limit", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+        int next = mCount;
+        mCount = secondCount;
+        secondCount = next + mCount;
+        if (mShowCount != null)
+            mShowCount.setText(Integer.toString(next));
+    }
+
+    public void reset(View view) {
+        mCount = 0;
+        secondCount = 1;
         if (mShowCount != null)
             mShowCount.setText(Integer.toString(mCount));
     }
