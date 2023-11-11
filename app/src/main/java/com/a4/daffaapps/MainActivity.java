@@ -1,6 +1,7 @@
 package com.a4.daffaapps;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private int mCount = 0;
 
     private int secondCount = 1;
+
+    private int currentFib = 0;
 
     private TextView mShowCount;
     @Override
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void countUp(View view) {
         EditText inputLimit = findViewById(R.id.input_limit);
-        if(inputLimit.getText().toString().isEmpty()) {
+        if(!inputLimit.getText().toString().isEmpty()) {
             int limit = Integer.parseInt(inputLimit.getText().toString());
             if(mCount >= limit) {
                 Toast.makeText(this, "Telah mencapai limit", Toast.LENGTH_LONG).show();
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mCount = secondCount;
         secondCount = next + mCount;
         if (mShowCount != null)
+            mShowCount.setTextColor(setColor());
             mShowCount.setText(Integer.toString(next));
     }
 
@@ -48,5 +52,14 @@ public class MainActivity extends AppCompatActivity {
         secondCount = 1;
         if (mShowCount != null)
             mShowCount.setText(Integer.toString(mCount));
+    }
+
+    public int setColor() {
+        currentFib++;
+        if(currentFib % 2 == 0) {
+            return ContextCompat.getColor(this, R.color.black);
+        } else {
+            return ContextCompat.getColor(this, R.color.blue);
+        }
     }
 }
