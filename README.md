@@ -1,4 +1,5 @@
 # Fibonacci Apps
+Untuk mencoba aplikasinya dapat di [download](my-apps.apk).
 ## Tampilan Aplikasi
 <img src="img/1.jpg" width=100 align="left">
 <img src="img/2.jpg" width=100 align="left">
