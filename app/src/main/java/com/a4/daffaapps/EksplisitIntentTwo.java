@@ -13,7 +13,7 @@ public class EksplisitIntentTwo extends AppCompatActivity {
     }
 
     public void homeScreen(View view) {
-        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        Intent i = new Intent(getApplicationContext(), EksplisitIntentOne.class);
         startActivity(i);
     }
 }

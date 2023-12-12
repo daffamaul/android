@@ -42,9 +42,10 @@ public class MainActivity extends AppCompatActivity {
         int next = mCount;
         mCount = secondCount;
         secondCount = next + mCount;
-        if (mShowCount != null)
+        if (mShowCount != null) {
             mShowCount.setTextColor(setColor());
             mShowCount.setText(Integer.toString(next));
+        }
     }
 
     public void reset(View view) {

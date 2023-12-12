@@ -10,7 +10,7 @@
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to News Screen"
+        android:text="Hi! this apps was developed by Daffa"
         android:textAlignment="center"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"

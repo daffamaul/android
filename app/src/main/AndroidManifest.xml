@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,19 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DaffaApps"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".EksplisitIntentOne"/>
+        <activity android:name=".EksplisitIntentTwo"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".AlarmProject"/>
+        <activity android:name=".ScrollingIceCold"/>
+        <activity android:name=".MainActivityOne"/>
+        <activity android:name=".MainActivitySecond"/>
+        <activity android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MainActivitySecond"
-            android:exported="true">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivityOne" />
         </activity>
     </application>
 
